@@ -1,0 +1,8 @@
+2022-05-22 22:45:43,431 CRITICAL client_conf_log.py Критическая ошибка
+2022-05-22 22:45:43,431 ERROR client_conf_log.py Ошибка
+2022-05-22 22:45:43,431 DEBUG client_conf_log.py Отладочная информация
+2022-05-22 22:45:43,431 INFO client_conf_log.py Информационное сообщение
+2022-05-23 21:36:56,566 CRITICAL client_conf_log.py Критическая ошибка
+2022-05-23 21:36:56,566 ERROR client_conf_log.py Ошибка
+2022-05-23 21:36:56,566 DEBUG client_conf_log.py Отладочная информация
+2022-05-23 21:36:56,566 INFO client_conf_log.py Информационное сообщение
