@@ -1,6 +1,7 @@
 """ Unit-tests for client """
 
 import sys
+
 sys.path.append('D:\\клиент-серверные приложения\\Lesson_3_Sidorova\\client-server-application')
 import unittest
 from common.variables import RESPONSE, ERROR, USER, ACCOUNT_NAME, TIME, ACTION, PRESENCE

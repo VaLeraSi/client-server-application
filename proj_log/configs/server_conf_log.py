@@ -1,18 +1,26 @@
 """Config server logging"""
 
 import sys
-sys.path.append('D:\\клиент-серверные приложения\\Lesson_3_Sidorova\\client-server-application')
-import os
-import logging
 import logging.handlers
+
+from pathlib import Path
+
 from common.variables import LOGGING_LEVEL
 
+# Получаем имя директории на 2 уровня выше и добавляем к пути директорию для логов
+LOG_DIR = Path(__file__).resolve().parent.parent / 'logs'
+# Подготовка имени файла для логирования
+LOG_FILE_NAME = 'server.log'
+
+# если директории нет создаём её
+if not LOG_DIR.exists():
+    LOG_DIR.mkdir()
 
 # создаём формировщик логов (formatter):
 SERVER_FORMATTER = logging.Formatter('%(asctime)s %(levelname)s %(filename)s %(message)s')
 
 # Подготовка имени файла для логирования
-PATH = os.path.join('D:\\клиент-серверные приложения\\Lesson_3_Sidorova\\client-server-application\\proj_log\\logs', 'server.log')
+PATH = LOG_DIR / LOG_FILE_NAME
 
 # создаём потоки вывода логов
 STREAM_HANDLER = logging.StreamHandler(sys.stderr)

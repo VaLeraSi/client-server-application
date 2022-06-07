@@ -1,11 +1,10 @@
 """Утилиты"""
 
 import json
-import sys
-sys.path.append('D:\\клиент-серверные приложения\\Lesson_3_Sidorova\\client-server-application')
 from common.variables import MAX_PACKAGE_LENGTH, ENCODING
 from errors import IncorrectDataRecivedError, NonDictInputError
 from decorate import log
+
 
 @log
 def get_message(client):
@@ -21,8 +20,10 @@ def get_message(client):
         response = json.loads(json_response)
         if isinstance(response, dict):
             return response
+        else:
+            raise IncorrectDataRecivedError
+    else:
         raise IncorrectDataRecivedError
-    raise IncorrectDataRecivedError
 
 
 @log
@@ -39,4 +40,3 @@ def send_message(sock, message):
     js_message = json.dumps(message)
     encoded_message = js_message.encode(ENCODING)
     sock.send(encoded_message)
-

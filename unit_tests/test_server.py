@@ -2,13 +2,13 @@
 
 import sys
 import unittest
+
 sys.path.append('D:\\клиент-серверные приложения\\Lesson_3_Sidorova\\client-server-application')
 from common.variables import RESPONSE, ERROR, USER, ACCOUNT_NAME, TIME, ACTION, PRESENCE
 from server import process_client_message
 
 
 class TestClass(unittest.TestCase):
-
     err_dict = {
         RESPONSE: 400,
         ERROR: 'Bad Request'

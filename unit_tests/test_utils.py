@@ -3,6 +3,7 @@
 import sys
 import unittest
 import json
+
 sys.path.append('D:\\клиент-серверные приложения\\Lesson_3_Sidorova\\client-server-application')
 from common.variables import RESPONSE, ERROR, USER, ACCOUNT_NAME, TIME, ACTION, PRESENCE, ENCODING
 from common.utils import get_message, send_message
@@ -10,6 +11,7 @@ from common.utils import get_message, send_message
 
 class SocketTest:
     """ Тестовый класс, на основе которого будут проходить все тесты"""
+
     def __init__(self, test_dict):
         self.test_dict = test_dict
         self.encoded_message = None
@@ -61,5 +63,3 @@ class TestClass(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-
